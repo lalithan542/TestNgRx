@@ -5,9 +5,11 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 
+
+import { HelloComponent } from "./hello.component";
 import { FitmentModule } from "../fitment/fitment.module";
 
-import { StoreModule, MetaReducer } from "@ngrx/store";
+import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { VehicleEffects } from "../fitment/store/effects/vehicle.effects";
 import { reducers } from "../fitment/store/reducers";
@@ -22,7 +24,7 @@ import { reducers } from "../fitment/store/reducers";
     HttpClientModule,
     EffectsModule.forRoot([VehicleEffects])
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent,HelloComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
